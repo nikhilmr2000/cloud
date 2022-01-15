@@ -1,0 +1,43 @@
+
+<html>
+<head></head>
+<body>
+<h1>Calculator</h1>
+
+<input type="number" placeholder="First Number" id="first"/><br><br>
+<input type="number" placeholder="Second  Number" id="second"/><br><br>
+
+<button id="add" onclick="calculate()">Add</button>
+<button id="subtract" onclick="calculate()">Subtract</button>
+<button id="multiply" onclick="calculate()">Multiply</button>
+<button id="divide" onclick="calculate()">Divide</button>
+
+<h2 id="out"></h2>
+
+<script type="text/javascript">
+	function calculate(){
+		var f=document.getElementById("first").value;
+		var s=document.getElementById("second").value;
+		let m= +f;
+		let n= +s;
+		document.getElementById("add").addEventListener("click", () => {
+			var d=m+n;
+			document.getElementById("out").innerHTML ="On Addition: "+d;
+		});
+		document.getElementById("subtract").addEventListener("click", () => {
+			var d=m-n;
+			document.getElementById("out").innerHTML ="On Subtraction: "+d;
+		});
+		document.getElementById("multiply").addEventListener("click", () => {
+			var d=m*n;
+			document.getElementById("out").innerHTML ="On Multiplication: "+d;
+		});
+		document.getElementById("divide").addEventListener("click", () => {
+			var d=m/n;
+			document.getElementById("out").innerHTML ="On Division: "+d;
+		});
+		
+	}
+</script> 
+</body>
+</html>
